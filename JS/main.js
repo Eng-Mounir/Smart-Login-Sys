@@ -7,6 +7,7 @@ var signinPassword = null;
 var incorrectMsg = null;
 var usersList = [];
 
+// ✅ Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize elements if they exist on the page
     signupName = document.getElementById("signupName");
@@ -27,33 +28,29 @@ document.addEventListener('DOMContentLoaded', function() {
     checkCurrentPage();
 });
 
-// CHECK CURRENT PAGE 
+// ========== CHECK CURRENT PAGE ==========
 function checkCurrentPage() {
     var currentPage = window.location.pathname;
     
     // If we're on home.html, check login status
-    if (currentPage.includes("home.html")) {
+    if (currentPage.includes("home.html") || currentPage.includes("Smart-Login-Sys/home")) {
         checkLoginStatus();
     }
     
     // If we're on index.html (login) and user is already logged in, redirect to home
-    if (currentPage.includes("index.html")) {
-        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
-        if (currentUser) {
-            window.location.href = "home.html";
-        }
+    if ((currentPage.includes("index.html") || currentPage.includes("Smart-Login-Sys/") || currentPage === "/") && localStorage.getItem("currentUser")) {
+        window.location.href = "home.html";
     }
     
     // If we're on signup.html and user is already logged in, redirect to home
-    if (currentPage.includes("signup.html")) {
-        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
-        if (currentUser) {
+    if (currentPage.includes("signup.html") || currentPage.includes("signUp.html")) {
+        if (localStorage.getItem("currentUser")) {
             window.location.href = "home.html";
         }
     }
 }
 
-//  HOME PAGE FUNCTIONS 
+// ========== HOME PAGE FUNCTIONS ==========
 function displayCurrentUser() {
     // Get current user from localStorage
     var currentUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -83,7 +80,7 @@ function checkLoginStatus() {
     }
 }
 
-//LOGOUT FUNCTION
+// ========== LOGOUT FUNCTION ==========
 function logout() {
     if (confirm("Are you sure you want to logout?")) {
         // Remove user from localStorage
@@ -94,7 +91,7 @@ function logout() {
     }
 }
 
-//SIGN UP FUNCTION
+// ========== SIGN UP FUNCTION ==========
 function signUp() {
     console.log("signUp function called");
     
@@ -132,7 +129,7 @@ function signUp() {
     }
 }
 
-// LOGIN FUNCTION 
+// ========== LOGIN FUNCTION ==========
 function login() {
     console.log("login function called");
     
@@ -170,7 +167,7 @@ function login() {
     }
 }
 
-// VALIDATION FUNCTIONS
+// ========== VALIDATION FUNCTIONS ==========
 function validateSignupName() {
     console.log("validateSignupName called");
     
@@ -250,7 +247,7 @@ function validateSignupPassword() {
     }
 }
 
-//HELPER FUNCTIONS
+// ========== HELPER FUNCTIONS ==========
 function isEmailExist(email) {
     return usersList.some(function(user) {
         return user.email === email;
