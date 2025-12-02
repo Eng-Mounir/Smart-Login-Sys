@@ -1,0 +1,28 @@
+body{
+    background-color:#24353f;
+}
+.loginBox , .navbar,.group{
+    background-color: #24353f;
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    padding: 20px;
+}
+h1 {
+    color: #17a2b8;
+}
+
+/* Add these styles */
+.loginBox .form-control, 
+.loginBox .form-control:focus {
+    background-color: transparent;
+    color: white !important;
+    border-color: #ced4da;
+}
+
+.loginBox .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.loginBox .form-control:focus {
+    border-color: #17a2b8;
+    box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+}

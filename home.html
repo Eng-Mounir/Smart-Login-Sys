@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login - Home</title>
+    <!-- ✅ Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- ✅ Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- ✅ Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-info" href="#">
+                <i class="fas fa-user-shield me-2"></i>SMART LOGIN
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item me-3">
+                        <span class="text-light fw-medium">
+                            Welcome, <span id="userNameNav" class="text-warning">Guest</span>
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-warning px-4" onclick="logout()" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container my-5">
+            <div class="group m-auto w-75 p-5 text-center">
+                <h1 id="username">Welcome <span id="userNameMain" class="text-info">User</span></h1>
+            </div>
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+    <script src="JS/home.js"></script>
+</body>
+</html>

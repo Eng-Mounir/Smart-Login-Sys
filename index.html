@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login</title>
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/png" href="imgs/favicon.ico">
+
+    <!-- ✅ Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ✅ Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- ✅ Custom CSS (AFTER Bootstrap) -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container d-flex justify-content-center mt-5 w-75">
+           <div class="loginBox m-auto w-75 p-5">
+                 <h1 class=" text-center">Smart Login System</h1>
+            <input id="signinEmail" class="form-control my-3 text-white" placeholder="Enter your email" type="email">
+            <input id="signinPassword" class="form-control my-3 text-white" placeholder="Enter your password" type="password">
+            <p id="incorrect"></p>
+
+            <button onclick="login()" class="btn btn-outline-info w-100 my-3" fdprocessedid="1s0tb8">Login</button>
+            <p class="signUpLink text-white text-center fs-5">Don’t have an account? <a class="text-white" href="/signUp.html">Sign Up</a></p>
+
+           </div>
+        </div>
+    </main>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="JS/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="JS/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+# Ignore libraries or large assets you don't need on GitHub
+fontawesome-free-7.0.0-web/
+fonts/
+images/
+
+# Logs or system files
+*.log
+.DS_Store
+Thumbs.db

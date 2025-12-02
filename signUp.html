@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login</title>
+    <link rel="icon" type="image/png" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <main>
+        <div class="container d-flex justify-content-center mt-5 w-75">
+           <div class="loginBox m-auto w-75 p-5">
+                 <h1 class="text-center">Smart Login System</h1>
+                 
+                 <!-- Add validation message divs -->
+                 <div id="alertNameMsg" class="d-none text-danger">Name must be at least 3 characters (letters only)</div>
+            <input id="signupName" class="form-control my-3 text-white" placeholder="Enter your Name" type="text" oninput="validateSignupName()">
+            
+            <div id="alertEmailMsg" class="d-none text-danger">Please enter a valid email</div>
+            <input id="signupEmail" class="form-control my-3 text-white" placeholder="Enter your email" type="email" oninput="validateSignupEmail()">
+            
+            <div id="alertPasswordMsg" class="d-none text-danger">Password must be at least 8 characters with uppercase, lowercase, number, and special character</div>
+            <input id="signupPassword" class="form-control my-3 text-white" placeholder="Enter your password" type="password" oninput="validateSignupPassword()">
+            
+            <p id="incorrect"></p>
+
+            <!-- Add onclick attribute -->
+            <button onclick="signUp()" class="btn btn-outline-info w-100 my-3" type="button">Sign Up</button>
+            <p class="text-white text-center fs-5">Already have an account? <a class="text-white" href="index.html">Sign in</a></p>
+           </div>
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
